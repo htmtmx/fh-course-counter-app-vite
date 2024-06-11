@@ -1,8 +1,9 @@
-export const FirstApp = () => {
+export const FirstApp = ({title, subtitle}) => {
+  console.log(title)
   return (
     <>
-    <h1>Cesar</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias deserunt hic eveniet eligendi ipsum illum quam itaque accusamus dignissimos voluptatem, similique quas neque, ullam voluptatibus provident reiciendis doloremque esse nesciunt!</p>
+      <h1>{ title }</h1>
+      <p>{ subtitle }</p>
     </>
   )
 }

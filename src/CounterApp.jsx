@@ -5,10 +5,20 @@ export const CounterApp = ({ title = 'No se ha proporcionado un título', value 
 
   const [counter, setCounter] = useState(value);
 
-  const handleClick = () => {
-    //! dos opciones para cambiar el valor de 
-    // setValueCount(valueCount + 1)
-    setCounter((c) => c + 1);
+  const handleClick = (accionType) => {
+    switch (accionType) {
+      case 1:
+        setCounter((c) => c + 1);
+      break;
+      case 2:
+        setCounter(value);
+      break;
+      case 3:
+        setCounter((c) => c - 1);
+      break;
+      default:
+        break;
+    }
   }
 
   return (
@@ -16,9 +26,19 @@ export const CounterApp = ({ title = 'No se ha proporcionado un título', value 
       <h1>{ title }</h1>
       <h2>{ counter }</h2>
       <button
-        onClick={ handleClick}
+        onClick={()=>handleClick(1)}
       >
         +1
+      </button>
+      <button
+        onClick={()=>handleClick(2)}
+      >
+        Reset
+      </button>
+      <button
+        onClick={()=>handleClick(3)}
+      >
+        -1
       </button>
     </>
   )

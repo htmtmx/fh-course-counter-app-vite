@@ -24,18 +24,18 @@ export const CounterApp = ({ title = 'No se ha proporcionado un título', value 
   return (
     <>
       <h1>{ title }</h1>
-      <h2>{ counter }</h2>
+      <h2 data-testid='valueCounter'>{ counter }</h2>
       <button
         onClick={()=>handleClick(1)}
       >
         +1
       </button>
-      <button
+      <button aria-label='btn-reset'
         onClick={()=>handleClick(2)}
       >
         Reset
       </button>
-      <button
+      <button 
         onClick={()=>handleClick(3)}
       >
         -1

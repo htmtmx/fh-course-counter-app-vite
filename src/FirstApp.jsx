@@ -4,8 +4,9 @@ export const FirstApp = ({ name='Cesar Pineda', title='Sin título', subtitle='S
 
   return (
     <>
-      <h1>{ title }</h1>
+      <h1 data-testid='test-title'>{ title }</h1>
       <h1>{ name }</h1>
+      <p>{ subtitle }</p>
       <p>{ subtitle }</p>
     </>
   )
